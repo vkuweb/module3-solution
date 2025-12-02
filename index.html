@@ -1,77 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>Module 3</title>
-
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food, LLC</title>
+
+  <!-- Bootstrap 3 CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style.css">
-
-
-
 <body>
 
+  <!-- Navbar (NOT fixed - so it scrolls away) -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <!-- Mobile menu button (visible only on xs) -->
+        <button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#mobile-menu" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-<nav class="navbar" id="top">
-  <div class="container-fluid">
+        <!-- Brand (always visible at left) -->
+        <a class="navbar-brand" href="#top">Food, LLC</a>
+      </div>
 
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-      <a class="navbar-brand" href="#">Food, LLC</a>
+      <!-- Mobile-only menu (collapse). 'visible-xs' ensures hidden on sm/md/lg -->
+      <div id="mobile-menu" class="collapse navbar-collapse visible-xs">
+        <ul class="nav navbar-nav">
+          <li><a href="#chicken">Chicken</a></li>
+          <li><a href="#beef">Beef</a></li>
+          <li><a href="#sushi">Sushi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page content -->
+  <div class="container" id="top">
+    <h1 class="text-center">Our Menu</h1>
+
+    <!-- A single very tall section (use grid, full width col-xs-12) -->
+    <div class="row">
+      <div id="chicken" class="col-xs-12 section-tall">
+        <h2 class="text-center">Chicken</h2>
+        <p>... lots of content or set fixed height in CSS ...</p>
+      </div>
     </div>
 
-    <div class="collapse" id="myNavbar">
-      <ul class="nav navbar-nav visible-xs">
-        <li><a class="menu-item" href="#">Chicken</a></li>
-        <li><a class="menu-item" href="#">Beef</a></li> 
-        <li><a class="menu-item" href="#">Sushi</a></li> 
-      </ul>
+    <!-- OPTIONAL: Add Beef & Sushi sections (optional/graded not required) -->
+    <div class="row">
+      <div id="beef" class="col-xs-12 col-sm-6 col-md-4 section-box">
+        <h3 class="text-center">Beef</h3>
+        <p>Some content...</p>
+        <p><a href="#top">Back to Top</a></p>
+      </div>
+      <div id="sushi" class="col-xs-12 col-sm-6 col-md-4 section-box">
+        <h3 class="text-center">Sushi</h3>
+        <p>Some content...</p>
+        <p><a href="#top">Back to Top</a></p>
+      </div>
     </div>
-
   </div>
-</nav>
 
-<h1 class="main-title">Our Menu</h1>
-
-
-
-<div class="row">
-
-  <div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="content-box">
-      <p class="item-name">Chicken</p>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href="#top">(Back to Top)</a></p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="content-box">
-      <p class="item-name">Beef</p>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href="#top">(Back to Top)</a></p>
-    </div>
-  </div>
-
-
-  <div class="col-lg-4 col-md-12 col-sm-12">
-    <div class="content-box">
-      <p class="item-name">Sushi</p>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href="#top">(Back to Top)</a></p>
-    </div>
-  </div>
-
-</div>
-
-
+  <!-- jQuery + Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
